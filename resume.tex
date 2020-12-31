@@ -1,0 +1,218 @@
+\documentclass[letterpaper,11pt]{article}
+%Preamble
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage[english]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage[empty]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fontspec}
+\usepackage[sfdefault, light]{roboto} 
+
+% documentclass options
+\raggedbottom
+\raggedright
+
+% font options
+%\setsansfont{Arial}
+
+% xcolor: defining colors
+\definecolor{beanGreen}{HTML}{94D13C}
+\definecolor{textGray}{HTML}{2D2D2D}
+
+% fancyhdr
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% hyperref
+\urlstyle{same} % Displays the links in the same style as the rest of the text.
+
+% fancyhdr
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt} % removes header rule
+\renewcommand{\footrulewidth}{0pt} % removes footer rule
+
+\setlength{\tabcolsep}{0in}
+
+% Logo
+\graphicspath{ {./icon/} }
+
+% titlesec customize Section Titles
+\titleformat{\section}
+{\sffamily\LARGE\color{black}}
+{\thesection}{}{}
+
+
+\newcommand{\resumeheader}[8]{
+	\begin{wrapfigure}{l}{1.3cm} %this figure will be at the right
+		\vspace{-12pt}
+    		\centering
+    		\includegraphics[width=1.3cm]{icon}
+	\end{wrapfigure}
+
+	\textbf{\href{#1}{\Huge #2}}\hfill\href{#3}{#4} \\
+	 #5 \hfill \color{black} \href{#6}{#7}
+}
+
+%-------------------- Education Commands-----------------------
+\newcommand{\education}[8]{
+	\large #1 \\ \small \color{textGray} #2
+	\begin{itemize}[leftmargin=0pt]
+	    \item[] \color{black} \normalsize \textbf{#3} \\ \color{textGray} \small #4 \hspace{1pt} | \textit{ #5}
+    	\item[] \color{black} \normalsize \textbf{#6} \\ \color{textGray} \small #7 \hspace{1pt} | \textit{ #8}
+    \end{itemize}
+}
+
+%---------------------- Projects Commands-------------------------
+\newcommand{\projectListStart}{\begin{itemize}[leftmargin=0pt]}
+\newcommand{\projectListEnd}{\end{itemize}}
+\newcommand{\projectItem}[2]{
+	\item[]{
+	    \normalsize \color{black} \textbf{#1} \\ 
+	    \small \color{textGray} #2
+	}
+}
+
+%---------------------- Skills Commands-------------------------
+\newcommand{\skillListStart}{\begin{itemize}[leftmargin=0pt]}
+\newcommand{\skillListEnd}{\end{itemize}}
+\newcommand{\skillItem}[2]{
+	\item[]{
+	    \normalsize \color{black} \textbf{#1}: \small \color{textGray} #2
+	}
+}
+
+%---------------------- Involvements Commands-------------------------
+\newcommand{\involvementsListStart}{\begin{itemize}[leftmargin=0pt]}
+\newcommand{\involvementsListEnd}{\end{itemize}}
+\newcommand{\involvementsItem}[2]{
+	\item[]{
+	    \normalsize \color{black} \textbf{#1} \\ 
+	    \small \color{textGray} #2
+	}
+}
+
+%---------------------- Experience Commands ----------------------
+\newcommand{\expListStart}{\begin{itemize}[leftmargin=0pt]}
+\newcommand{\expListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]\small}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1ex}}
+\newcommand{\resumeSubheading}[4]{
+	\item[]{
+    	\large \color{black} \textbf{#1} \hfill \normalsize #2 \\
+    	\normalsize \color{textGray} #3 \hfill \textit{#4} 
+    }
+}
+
+
+\begin{document}
+% set to serif family
+\sffamily
+%----------HEADING-----------------
+
+\resumeheader
+	{limmatthew.com}{Matthew Lim}{mailto:mlim45@gatech.edu}{mlim45@gatech.edu}
+	{UX Designer}{www.limmatthew.com}{limmatthew.com}
+	
+
+\begin{paracol}{2}
+	% paracol: Seperation between columns
+	\setlength{\columnsep}{3em}
+
+	%-----------EXPERIENCE-----------------
+	\section*{Experience}
+	\expListStart
+		\resumeSubheading{Digital Threats to Democracy}{Atlanta, GA}
+		    {Graduate Research Assistant}{May 2020 - Present}
+		    \resumeItemListStart
+			    \item {Modernized UI/UX of social media content aggregation platform \href{https://github.com/TID-Lab/aggie}{(Aggie)} for detecting hate speech and misinformation in Myanmar, Liberia, and Ethiopia.} 
+				\item {Launched three major features (Facebook comments, content tagging, media thumbnails) from design to development to deployment.} 
+				\item {Formalized a user study with 20 Burmese users to research usability and an A/B study of various machine learning hate score visualizations.}
+		    \resumeItemListEnd
+        \vspace{.3333em}
+    	\resumeSubheading{Georgia Tech College of Design}{Atlanta, GA}
+            {Teaching Assistant}{Aug 2017 - May 2020}
+            \resumeItemListStart
+                \item{Facilitated design thinking workshops, classes, and events for students, hack-a-thons, faculty, and companies.}
+                \item{Renovated a 15,000 sq. ft. food court into a design thinking innovation space on Georgia Tech's campus.} 
+                \item{Developed a campus-wide class showcase event for Stanford's University Innovation Fellowship capstone.}
+            \resumeItemListEnd
+        \vspace{.3333em}
+    	\resumeSubheading{Siemens Inc.}{Norcross, GA}
+            {Software Engineering Intern}{May 2019 - July 2019}
+            \resumeItemListStart
+                \item
+                  {Built mass installation and hundreds of automated tests for an IoT data collection unit known as \href{https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html}{Industrial Edge}.}
+        		\item{Designed and prototyped a metering app for an unreleased heat monitoring system on Siemens' IoT analytics platform.}
+        		\item{Drafted and 3D printed prototype for a metering product's protective case. Generated cost breakdown analysis report of case for different methods of manufacture. }
+        		\item{Lead design workshop for intern class of 20 and 3 full-time employees to expose them to design thinking.}
+            \resumeItemListEnd
+        \vspace{.3333em}
+        \resumeSubheading {Autodesk Inc.}{San Francisco, CA}
+            {Software Development Intern}{July 2018 - Dec 2018}
+            \resumeItemListStart
+                \item
+                  {Enhanced functionality, responsiveness, and usability of Autodesk's Screencast web player with over 375,000 monthly users on the Autodesk Knowledge Network.}
+                 \item
+                  {Championed UI design overhaul of web player to senior leadership after review of user research and web analytics.}
+        		\item{Prototyped fellow Autodesk UX designer's web application to map and visualize consumer support cases.}
+            \resumeItemListEnd
+  	\expListEnd	
+	\switchcolumn	
+	%----------Education----------------
+  	\section*{Education}
+		\education{Georgia Institute of Technology}{Atlanta, GA, USA}
+		      {M.S. in Human-Computer Interaction}{Aug 2020 - May 2022} {Interactive Computing Track}
+		      {B.S. in Computer Engineering}{Aug 2016 - May 2020}{Highest Honors}
+	\vspace{.10ex}
+    %----------Projects-----------------
+	\section*{Projects}
+		\projectListStart
+			\projectItem{Aggie}{A human-in-the-loop social media monitoring platform created with Facebook, New Myanmar Foundation, Sassafras, and The Carter Center. }
+			\vspace{.4ex}
+			\projectItem{Glow: Make your relationship shine}{A phone app that helps your long distance relationship thrive through relational savoring.}
+			\vspace{.4ex}
+			\projectItem{Borrowing Board}{A digital bulletin board system that enhances lending and borrowing on college campuses.}
+			
+		\projectListEnd
+	\vspace{.05ex}
+	%----------Involvements-------------
+	\section*{Involvements}
+		\involvementsListStart
+			\involvementsItem{Diversity \& Inclusion Fellow}{Studying inclusivity in makerspaces with Institute Diversity, Equity, and Inclusion at Georgia Tech.}
+			\vspace{.4ex}
+			\involvementsItem{Director of Strategy at The Hive}{Imagining the future and assessing the now of an high-tech makerspace that sees 200+ users daily.}
+		\involvementsListEnd
+	\vspace{.05ex}
+	%---------SKILLS---------------------
+	\section*{Skills}
+		\skillListStart
+			\skillItem{Design}{Wireframing, Prototyping, Usability Testing, User Research, Personas, Contextual Inquiry, System Evaluation, UI/UX design, User Flows, Information Architecture, Design Patterns }
+			\vspace{.4ex}
+			\skillItem{Technologies}{TypeScript, React, Angular, Node.js, D3js, git, HTML, CSS, Python, Java, C++}
+			\vspace{.4ex}
+			\skillItem{Tools}{Figma, Sketch, Adobe XD, Illustrator, After Effects, Premiere Pro, Photoshop, Fusion 360}
+		\skillListEnd
+\end{paracol}
+
+\end{document}
